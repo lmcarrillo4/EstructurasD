@@ -1,2 +1,4 @@
-# Repositorio-de-Estrcturas
-Repository de Semmestre Estrctura de Datos
+## Mis ejercicios
+
+Este repositorio contiene mis ejercicios de
+Estructura de Datos desarrollados en C++.
