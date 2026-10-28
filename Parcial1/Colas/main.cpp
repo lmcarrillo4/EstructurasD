@@ -50,9 +50,9 @@ int main(){
         cout<<"5. Cedulas de Pichincha"<<endl;
         cout<<"6. Explicar cola"<<endl;
         cout<<"7. Modificar persona"<<endl;
-        cout<<"8. Buscar por apellido"<<endl;
-        cout<<"9. Salir"<<endl;
-
+        cout << "8. Buscar por apellido" << endl;
+        cout << "9. Mostrar nombres completos" << endl;
+        cout << "10. Salir" << endl;
         try{
             opcion = leerEntero("Ingrese una opcion: ");
 
@@ -104,11 +104,16 @@ int main(){
                 cola.buscarApellido(apellido);
                 break;
             }
-            case 9:
-                cout<<"SALIENDO.."<<endl;
+            case 9: {
+                cola.mostrarNombresCompletos();
                 break;
+            }
+            case 10: {
+                cout << "SALIENDO.." << endl;
+                break;
+            }
             default:
-                cout<<"Opcion no valida"<<endl;
+                cout << "Opcion no valida" << endl;
                 break;
             }
         } catch(const invalid_argument& e){
@@ -118,7 +123,7 @@ int main(){
         } catch(const exception& e){
             cout<<"Error inesperado: "<<e.what()<<endl;
         }
-    }while (opcion != 9);
+    }while (opcion != 10);
 
     return 0;
 }

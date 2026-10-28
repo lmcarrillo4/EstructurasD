@@ -200,6 +200,27 @@ public:
             cout<<"Total: " <<contador <<endl;
         }
     }
+    
+void mostrarNombresCompletos() {
+    if (estaVacia()) {
+        cout << "La cola esta vacia." << endl;
+        return;
+    }
+
+    auto nombreCompleto = [](T& persona) {
+        return persona.getNombre() + " " + persona.getApellido();
+    };
+
+    Nodo<T>* actual = frente;
+
+    cout << "\n--- NOMBRES COMPLETOS ---\n";
+
+    while (actual != nullptr) {
+        cout << nombreCompleto(actual->dato) << endl;
+        actual = actual->siguiente;
+    }
+}
+
 };
 
 #endif
